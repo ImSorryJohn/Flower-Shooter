@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://mk8bys5kv3gh"]
+[gd_scene load_steps=6 format=3 uid="uid://mk8bys5kv3gh"]
 
+[ext_resource type="Script" uid="uid://bjkkaa41ceh8f" path="res://player.gd" id="1_hqtel"]
 [ext_resource type="Texture2D" uid="uid://cp554mojcrg2b" path="res://PlayerFlowerShooter.png" id="1_onrkg"]
 [ext_resource type="AudioStream" uid="uid://da6xjrtgbwbek" path="res://Whisteling.mp3" id="2_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://c043n5gxsug2i" path="res://Shoot.wav" id="4_sweqy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqtel"]
 radius = 18.0278
@@ -9,6 +11,7 @@ radius = 18.0278
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 collision_mask = 3
+script = ExtResource("1_hqtel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6.75)
@@ -33,7 +36,8 @@ bus = &"SFX"
 stream = ExtResource("2_i3pqv")
 bus = &"New Bus 2"
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+[node name="Shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_sweqy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -97,3 +101,8 @@ offset_right = 36.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Restart?"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[connection signal="button_up" from="CanvasLayer/Death Screen/Panel/Button" to="." method="restart"]
