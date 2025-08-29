@@ -7,7 +7,6 @@
 radius = 18.0278
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-position = Vector2(314, 292)
 collision_layer = 2
 collision_mask = 3
 
@@ -25,7 +24,76 @@ texture = ExtResource("1_onrkg")
 target_position = Vector2(0, -1000)
 collision_mask = 3
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Basic Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_i3pqv")
 autoplay = true
 bus = &"SFX"
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_i3pqv")
+bus = &"New Bus 2"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Death Screen" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Death Screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.254902)
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Death Screen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -36.0
+offset_right = 43.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Death Screen/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -20.0
+offset_right = 34.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You Lost"
+
+[node name="Button" type="Button" parent="CanvasLayer/Death Screen/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -31.0
+offset_right = 36.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Restart?"
