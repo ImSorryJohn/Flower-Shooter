@@ -15,9 +15,9 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	global_rotation = dir_to_player.angle() + PI/2.0
-	if ray_cast_2d.is_colliding() and ray_cast_2d.get_collider() = player:
-		player.kil()
-		
+	#if ray_cast_2d.is_colliding() and ray_cast_2d.get_collider() = player:
+		#player.kil()
+	
 func kill():
 	if dead:
 		return
