@@ -61,3 +61,7 @@ exit={
 
 2d_physics/layer_1="enviorment"
 2d_physics/layer_2="characters"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.423529, 0.588235, 0, 0.521569)

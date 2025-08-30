@@ -29,6 +29,7 @@ collision_mask = 3
 
 [node name="Basic Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_i3pqv")
+volume_db = -7.495
 autoplay = true
 bus = &"SFX"
 

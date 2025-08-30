@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_aqk2v"]
 
 [node name="World" type="Node2D"]
-position = Vector2(73, 68)
+position = Vector2(71.0744, 67.627)
 
 [node name="Enviorment" type="Node2D" parent="."]
 
@@ -29,7 +29,7 @@ scale = Vector2(5.14334, 5.38898)
 texture = ExtResource("1_fj7yv")
 
 [node name="Tree3" type="Sprite2D" parent="Enviorment/Floor"]
-position = Vector2(-118.971, -102.856)
+position = Vector2(-51.019, -40.6225)
 scale = Vector2(0.0243033, 0.0231955)
 texture = ExtResource("2_tlwt5")
 
@@ -40,14 +40,15 @@ scale = Vector2(10.155, 10.155)
 shape = SubResource("CircleShape2D_aqk2v")
 
 [node name="Tree" type="Sprite2D" parent="Enviorment/Floor"]
-position = Vector2(3.425, 0)
-scale = Vector2(0.125, 0.125)
+position = Vector2(24.8072, -29.8598)
+scale = Vector2(0.015, 0.015)
 texture = ExtResource("2_tlwt5")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Enviorment/Floor/Tree"]
+scale = Vector2(0.015, 0.015)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enviorment/Floor/Tree/StaticBody2D"]
-scale = Vector2(10.155, 10.155)
+scale = Vector2(0.015, 0.015)
 shape = SubResource("CircleShape2D_aqk2v")
 
 [node name="Tree2" type="Sprite2D" parent="Enviorment/Floor"]

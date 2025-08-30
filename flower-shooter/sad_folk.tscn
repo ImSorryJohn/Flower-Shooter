@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj7cp6wm0nars"]
+
+[ext_resource type="Script" uid="uid://b665sfuujowl6" path="res://sad_folk.gd" id="1_n44ar"]
+[ext_resource type="Texture2D" uid="uid://cmmudoh84y0u7" path="res://CryFolk.png" id="2_m0h3y"]
+[ext_resource type="AudioStream" uid="uid://5o5wlljrtx07" path="res://sniffles.wav" id="3_qw668"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lnrek"]
+radius = 14.1421
+
+[node name="SadFolk" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_n44ar")
+move_speed = null
+
+[node name="Graphycs" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphycs"]
+scale = Vector2(1.85714, 1.8125)
+texture = ExtResource("2_m0h3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lnrek")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, -70)
+collision_mask = 3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qw668")
+bus = &"SFX"
