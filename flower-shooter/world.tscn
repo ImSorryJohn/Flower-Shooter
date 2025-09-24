@@ -67,18 +67,14 @@ position = Vector2(525, 262)
 
 [node name="SadFolk" parent="." instance=ExtResource("4_aqk2v")]
 position = Vector2(334.926, 273.373)
-move_speed = 100
 
 [node name="SadFolk2" parent="." instance=ExtResource("4_aqk2v")]
 position = Vector2(471.926, 199.373)
-move_speed = 100
 
 [node name="SadFolk3" parent="." instance=ExtResource("4_aqk2v")]
 position = Vector2(2261.7, 1825.18)
 scale = Vector2(5.14334, 5.38898)
-move_speed = 100
 
 [node name="SadFolk4" parent="." instance=ExtResource("4_aqk2v")]
 position = Vector2(2261.7, 1825.18)
 scale = Vector2(5.14334, 5.38898)
-move_speed = 100
